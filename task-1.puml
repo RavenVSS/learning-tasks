@@ -20,7 +20,7 @@ API --> User: Return SUCCESS
 User --> API: GET /convert-to-webp/async/{UUID}
 API --> User: Return file
 
-box "Convertor-Service"
+box "Convertor-Service" #lightgreen
 participant API
 participant Service
 participant Scheduler
