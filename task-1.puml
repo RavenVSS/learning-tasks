@@ -1,0 +1,29 @@
+@startuml
+
+autonumber
+
+User --> API: POST /convert-to-webp/async
+API --> Service: Create task
+Service --> API: Return taskId
+API --> User: Return taskId
+
+loop Exists available tasks
+Scheduler --> Service: Get available task
+Service --> Scheduler: Return task
+Scheduler --> Scheduler: Processing
+Scheduler --> Service: Return result
+end loop
+
+User --> API: GET /convert-to-webp/async/{UUID}/status
+API --> User: Return SUCCESS
+
+User --> API: GET /convert-to-webp/async/{UUID}
+API --> User: Return file
+
+box "Convertor-Service"
+participant API
+participant Service
+participant Scheduler
+end box
+
+@enduml
