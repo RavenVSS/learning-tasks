@@ -12,5 +12,5 @@
 - Валидация через аннотации @Valid или @Validated (опционально)
 
 ### Почитать
-- [Обработка исключений в REST API SpringBoot](https://www.bezkoder.com/spring-boot-postgresql-example/)](https://struchkov.dev/blog/ru/exception-handling-controlleradvice/)
+- [Обработка исключений в REST API SpringBoot](https://struchkov.dev/blog/ru/exception-handling-controlleradvice/)
 - [Validation in Spring Boot](https://www.baeldung.com/spring-boot-bean-validation)
